@@ -12,7 +12,8 @@ This skin has been tested on the nabeelio/phpVMS repository running on PHP versi
 
 1. Download phpVMS and this skin.
 2. Create a subdomain of your website (e.g. crew.yourdomain.com) and install phpVMS.
-3. Move all files from this repository into a folder named 'crewcenter'.
+3. Create a folder named 'crewcenter' in the lib/skins directory of your phpVMS installation.
+3. Move all files from this repository into the folder named 'crewcenter'.
 4. Log in to the phpVMS admin center, navigate to 'General Settings', then select the 'crewcenter' skin.
 
 # Contact
