@@ -80,6 +80,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="<?php echo url('/schedules/view'); ?>">
+                            <i class="fa fa-search"></i> <span>Search Schedules</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="<?php echo url('/pireps/filepirep'); ?>">
                             <i class="fa fa-file-text"></i> <span>File Manual Report</span>
                         </a>
