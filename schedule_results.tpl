@@ -131,7 +131,7 @@
                     </li>
                     <li>
                         <a href="<?php echo url('/schedules/view'); ?>">
-                            <i class="fa fa-search"></i> <span>Search Schedules</span>
+                            <i class="fa fa-search"></i> <span>Schedule Search</span>
                         </a>
                     </li>
                     <li>

@@ -4,6 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         
+        <!-- Chrome, Firefox OS, Opera and Vivaldi -->
+        <meta name="theme-color" content="#367FA9">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#367FA9">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#367FA9">
+        
         <!-- <title><?php echo $page_title; ?></title> -->
         <title><?php echo SITE_NAME; ?> CrewCenter</title>
         
