@@ -1,5 +1,4 @@
-<?php require 'app_top.php' ?>
-
+<?php if(!defined('IN_PHPVMS') && IN_PHPVMS !== true) { die(); } ?>
 <section class="content-header">
     <h1>Downloads</h1>
 </section>
@@ -13,8 +12,6 @@
         </div>
     </div>
 </section>
-
-<?php require 'app_bottom.php' ?>
 
 <script type="text/javascript">
     var delay=1000; //1 second

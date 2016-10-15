@@ -1,5 +1,4 @@
-<?php require 'app_top.php' ?>
-
+<?php if(!defined('IN_PHPVMS') && IN_PHPVMS !== true) { die(); } ?>
 <section class="content-header">
     <h1>My Profile</h1>
 </section>
@@ -9,7 +8,7 @@
     <!-- Main row -->
     <div class="row">
         <!-- Left col -->
-        <section class="col-lg-3 connected">
+        <section class="col-md-4 col-md-offset-1 connected">
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title">Edit Profile</h3>
@@ -103,7 +102,7 @@
                                     }
                                     else
                                     {
-                                        echo '<input type="text" class=" name="'.$field->fieldname.'" value="'.$field->value.'" />';
+                                        echo '<input type="text" class="form-control" name="'.$field->fieldname.'" value="'.$field->value.'" />';
                                     }
 
                                     echo '</div>';
@@ -141,7 +140,7 @@
         </section>
         <!-- /.Left col -->
         <!-- Middle col -->
-        <section class="col-lg-3 connected">
+        <section class="col-md-4 col-md-offset-1 connected">
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title">Change Password</h3>
@@ -174,26 +173,3 @@
 
 </section>
 <!-- /.content -->
-
-<?php require 'app_bottom.php' ?>
-
-
-<!-- <h3>Change Password</h3>
-<form action="<?php echo url('/profile');?>" method="post">
-<dl>
-
-	<dt>Enter your new password</dt>
-	<dd><input type="password" id="password" name="password1" value="" /></dd>
-	
-	<dt>Enter your new password again</dt>
-	<dd><input type="password" name="password2" value="" /></dd>
-	
-	<dt>Enter your old password</dt>
-	<dd><input type="password" name="oldpassword" /></dd>
-	
-	<dt></dt>
-	<dd><input type="hidden" name="action" value="changepassword" />
-		<input type="submit" name="submit" value="Save Password" />
-	</dd>
-</dl>
-</form> -->

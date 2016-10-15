@@ -1,3 +1,4 @@
+<?php if(!defined('IN_PHPVMS') && IN_PHPVMS !== true) { die(); } ?>
 <body class="hold-transition login-page" style="background-color: #222222;">
     <div class="login-box">
         <div class="login-logo">

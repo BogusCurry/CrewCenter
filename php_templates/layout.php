@@ -52,21 +52,37 @@
     </head>
     <body>
         <?php echo $page_htmlreq; ?>
+		<?php
+		// var_dump($_SERVER['REQUEST_URI']);
+		# Hide the header if the page is not the registration or login page
+		# Bit hacky, don't like doing it this way
+		if (!isset($_SERVER['REQUEST_URI']) || ltrim($_SERVER['REQUEST_URI'],'/') !== SITE_URL.'/index.php/login' || ltrim($_SERVER['REQUEST_URI'],'/') !== SITE_URL.'/index.php/registration') {
+			if(Auth::LoggedIn()) {
+				Template::Show('app_top.php');
+			}
+		}
+		?>
         
         <div id="content">
             <?php echo $page_content; ?>
         </div>
         
-        <!-- jQuery 2.2.3 -->
-        <script src="<?php echo SITE_URL?>/lib/skins/crewcenter/plugins/jQuery/jquery-2.2.3.min.js"></script>
-        <!-- jQuery UI 1.11.4 -->
-        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-        <script>
-            $.widget.bridge('uibutton', $.ui.button);
-        </script>
+		<?php
+		# Hide the footer if the page is not the registration or login page
+		# Bit hacky, don't like doing it this way
+		if (!isset($_SERVER['REQUEST_URI']) || ltrim($_SERVER['REQUEST_URI'],'/') !== SITE_URL.'/index.php/login' || ltrim($_SERVER['REQUEST_URI'],'/') !== SITE_URL.'/index.php/registration') {
+			if(Auth::LoggedIn()) {
+				Template::Show('app_bottom.php');
+			}
+		}
+		?>
+
         <!-- Bootstrap 3.3.6 -->
         <script src="<?php echo SITE_URL?>/lib/skins/crewcenter/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script type="text/javascript">
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
         <!-- Morris.js charts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
         <script src="<?php echo SITE_URL?>/lib/skins/crewcenter/plugins/morris/morris.min.js"></script>
