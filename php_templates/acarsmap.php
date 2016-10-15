@@ -1,3 +1,4 @@
+<?php if(!defined('IN_PHPVMS') && IN_PHPVMS !== true) { die(); } ?>
 <?php 
 /**
  * These are some options for the ACARS map, you can change here
@@ -50,17 +51,17 @@ var acars_map_defaults = {
 /* See below for details and columns you can use in this table */
 ?>
 <div class="table-responsive">
-    <table border = "0" width="100%" class="acarsmap table table-bordered">
+    <table class="acarsmap table table-bordered">
     <thead>
         <tr>
-            <td><b>Pilot</b></td>
-            <td><b>Flight Number</b></td>
-            <td><b>Departure</b></td>
-            <td><b>Arrival</b></td>
-            <td><b>Status</b></td>
-            <td><b>Altitude</b></td>
-            <td><b>Speed</b></td>
-            <td><b>Distance/Time Remain</b></td>
+            <th class="text-center"><b>Pilot</b></th>
+            <th class="text-center"><b>Flight Number</b></th>
+            <th class="text-center"><b>Departure</b></th>
+            <th class="text-center"><b>Arrival</b></th>
+            <th class="text-center"><b>Status</b></th>
+            <th class="text-center"><b>Altitude</b></th>
+            <th class="text-center"><b>Speed</b></th>
+            <th class="text-center"><b>Distance/Time Remain</b></th>
         </tr>
     </thead>
     <tbody id="pilotlist"></tbody>
@@ -102,14 +103,14 @@ var acars_map_defaults = {
 ?>
 <script type="text/html" id="acars_map_row">
 <tr class="<%=flight.trclass%>">
-<td><a href="<?php echo url('/profile/view');?>/<%=flight.pilotid%>"><%=flight.pilotid%> - <%=flight.pilotname%></a></td>
-<td><%=flight.flightnum%></td>
-<td><%=flight.depicao%></td>
-<td><%=flight.arricao%></td>
-<td><%=flight.phasedetail%></td>
-<td><%=flight.alt%></td>
-<td><%=flight.gs%></td>
-<td><%=flight.distremaining%> <?php echo Config::Get('UNITS');?> / <%=flight.timeremaining%></td>
+<td class="text-center"><a href="<?php echo url('/profile/view');?>/<%=flight.pilotid%>"><%=flight.pilotid%> - <%=flight.pilotname%></a></td>
+<td class="text-center"><%=flight.flightnum%></td>
+<td class="text-center"><%=flight.depicao%></td>
+<td class="text-center"><%=flight.arricao%></td>
+<td class="text-center"><%=flight.phasedetail%></td>
+<td class="text-center"><%=flight.alt%></td>
+<td class="text-center"><%=flight.gs%></td>
+<td class="text-center"><%=flight.distremaining%> <?php echo Config::Get('UNITS');?> / <%=flight.timeremaining%></td>
 </tr>
 </script>
 

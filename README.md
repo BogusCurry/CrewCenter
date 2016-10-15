@@ -10,7 +10,8 @@ As per the phpVMS license and the condition for using this skin, you must keep t
 This skin is designed to be used on a phpVMS installation on a subdomain. Your main website will be static webpages without phpVMS.
 This skin has been tested on the nabeelio/phpVMS repository running on PHP version 5.3. PHP templates are also included in the 'php_templates' folder.
 
-1. Download phpVMS and this skin. I you are running phpVMS 5.5.x, move the PHP templates from the 'php_templates' folder into the main skin folder.
+1. Download phpVMS and this skin. 
+    If you are running phpVMS 5.5.x, move and replace all the files in the 'php_templates' folder into the main 'crew_center' folder and it should run as normal.
 2. Create a subdomain of your website (e.g. crew.yourdomain.com) and install phpVMS.
 3. Create a folder named 'crewcenter' in the lib/skins directory of your phpVMS installation.
 3. Move all files from this repository into the folder named 'crewcenter'.

@@ -1,3 +1,4 @@
+<?php if(!defined('IN_PHPVMS') && IN_PHPVMS !== true) { die(); } ?>
 <?php
 
 // SKINNED FOR CREWCENTER - OPTIMISED FOR PIREPVIEW
@@ -163,5 +164,3 @@ map.fitBounds(bounds);
         </section>
     </div>
 </section>
-
-<?php require 'app_bottom.php' ?>
